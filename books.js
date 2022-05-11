@@ -172,7 +172,9 @@ function updateBook(id){
         contentType: false,
         data: bookForm,
         url:`http://localhost:8080/books/edit/${id}`,
-        success:showList
+        success: function (){
+            showList()
+        }
     })
     event.preventDefault();
 }
